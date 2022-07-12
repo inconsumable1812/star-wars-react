@@ -4,7 +4,7 @@ import { defaults } from 'lodash';
 import { initialState } from './initialState';
 
 import { selectGetInfo } from './selectors';
-import { getPlanets } from './thunks';
+import { getPeople, getPlanets } from './thunks';
 
 const slice = createSlice({
   name: 'GetInfo',
@@ -17,11 +17,22 @@ const slice = createSlice({
       })
       .addCase(getPlanets.fulfilled, (state, { payload }) => {
         state.status = 'fulfilled';
-        console.log(payload, 'payload');
 
         state.planets = defaults(payload, initialState.planets);
       })
       .addCase(getPlanets.rejected, (state, action) => {
+        state.status = 'rejected';
+        state.error = action.error.message ?? '';
+      })
+      .addCase(getPeople.pending, (state) => {
+        state.status = 'pending';
+      })
+      .addCase(getPeople.fulfilled, (state, { payload }) => {
+        state.status = 'fulfilled';
+
+        state.people = defaults(payload, initialState.people);
+      })
+      .addCase(getPeople.rejected, (state, action) => {
         state.status = 'rejected';
         state.error = action.error.message ?? '';
       });
@@ -30,4 +41,4 @@ const slice = createSlice({
 
 const { reducer } = slice;
 
-export { reducer, selectGetInfo, getPlanets };
+export { reducer, selectGetInfo, getPlanets, getPeople };

@@ -32,7 +32,7 @@ type People = {
   skin_color: string;
   eye_color: string;
   birth_year: string;
-  gender: string;
+  gender: 'male' | 'female' | 'unknown' | 'n/a';
   homeworld: URL;
   films: URL[];
   species: URL[];

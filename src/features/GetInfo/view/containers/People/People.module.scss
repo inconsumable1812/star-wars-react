@@ -1,0 +1,20 @@
+.root {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+
+.planetName {
+  text-align: center;
+}
+
+.genderLabel {
+  display: inline-block;
+  margin: 12px 0;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}

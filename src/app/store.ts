@@ -10,7 +10,9 @@ import { reducer as GetInfoReducer } from 'src/features/GetInfo';
 const makeStore = () =>
   configureStore({
     reducer: {
-      features: combineReducers({ GetInfo: GetInfoReducer })
+      features: combineReducers({
+        GetInfo: GetInfoReducer
+      })
     },
     devTools: true
   });

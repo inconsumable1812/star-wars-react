@@ -5,7 +5,7 @@ const fetch = async (
 ): Promise<Response | globalThis.Error> => {
   try {
     const response = await globalThis.fetch(
-      `https://swapi.dev/api/planets/?${Object.entries(queryParameters).reduce(
+      `https://swapi.dev/api/people/?${Object.entries(queryParameters).reduce(
         (acc, [key, value]) => `${acc}&${key}=${value}`,
         ''
       )}`

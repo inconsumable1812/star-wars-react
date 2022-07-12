@@ -1,4 +1,4 @@
-import { Peoples, Planets } from 'src/api/types';
+import { Planets, Peoples } from 'src/api/types';
 import { RequestStatus } from 'src/helpers/redux';
 
 type State = {

@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import App from './App';
+
 import { makeStore } from './app/store';
 import { Provider } from 'react-redux';
+import RoutesSwitcher from './routes/routes';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={makeStore()}>
-      <App />
+      <RoutesSwitcher></RoutesSwitcher>
     </Provider>
   </React.StrictMode>
 );
