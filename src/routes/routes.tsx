@@ -5,7 +5,7 @@ import { GetInfo } from 'src/features/GetInfo';
 type Props = {};
 
 const RoutesSwitcher: FC<Props> = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<GetInfo variant="planets"></GetInfo>} />
       <Route path="planet" element={<GetInfo variant="people"></GetInfo>}>
