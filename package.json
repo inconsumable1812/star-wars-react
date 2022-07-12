@@ -1,6 +1,7 @@
 {
   "name": "star-wars-react",
   "version": "0.1.0",
+  "homepage": "http://inconsumable1812.github.io/star-wars-react",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
@@ -24,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +49,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.182",
+    "gh-pages": "^4.0.0",
     "sass": "^1.53.0"
   }
 }
