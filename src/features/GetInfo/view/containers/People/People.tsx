@@ -21,7 +21,7 @@ const People: FC<Props> = () => {
     (planet) => planet.name === params.planetName
   );
   if (currentPlanetArray.length === 0) {
-    window.location.href = '/mock/mock';
+    window.location.href = '/mock';
   }
 
   const currentPlanet = currentPlanetArray[0];

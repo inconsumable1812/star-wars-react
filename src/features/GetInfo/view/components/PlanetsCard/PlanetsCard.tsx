@@ -10,7 +10,7 @@ type Props = {
 
 const PlanetsCard: FC<Props> = ({ planet }) => {
   return (
-    <Link to={`/${planet.name}`} className={`${styles.link}`}>
+    <Link to={`/planet/${planet.name}`} className={`${styles.link}`}>
       <div className={`${styles.container}`}>
         <h2 className={`${styles.planetName}`}>{planet.name}</h2>
         <div className={`${styles.planetInfo}`}>

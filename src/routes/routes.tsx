@@ -8,10 +8,12 @@ const RoutesSwitcher: FC<Props> = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<GetInfo variant="planets"></GetInfo>} />
-      <Route
-        path=":planetName"
-        element={<GetInfo variant="people"></GetInfo>}
-      />
+      <Route path="planet" element={<GetInfo variant="people"></GetInfo>}>
+        <Route
+          path=":planetName"
+          element={<GetInfo variant="people"></GetInfo>}
+        />
+      </Route>
       <Route
         path="*"
         element={
