@@ -52,9 +52,13 @@ const People: FC<Props> = () => {
         </label>
 
         <div className={`${styles.people}`}>
-          {peopleInCurrentPlanet.map((p) => (
-            <PeopleCard people={p} key={p.name}></PeopleCard>
-          ))}
+          {peopleInCurrentPlanet.length === 0 ? (
+            <p>Персонажей не найдено</p>
+          ) : (
+            peopleInCurrentPlanet.map((p) => (
+              <PeopleCard people={p} key={p.name}></PeopleCard>
+            ))
+          )}
         </div>
       </main>
     </>
